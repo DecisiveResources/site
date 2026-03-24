@@ -2,7 +2,7 @@
 layout: post
 title: "The House Always Loses Without a CISO"
 description: The Most Risk-Savvy Industry in the World Is Taking Its Biggest Gamble on Cybersecurity
-author: Decisive Resources
+author: Mishaal
 category: [ vCISO ]
 image: assets/post-images/The House Always Loses.jpg
 featured: false
@@ -31,4 +31,4 @@ A CISO isn't a firewall. They're the executive who translates cyber risk into bu
 The casino industry built an entire science around managing risk. Cybersecurity is no different, except the house doesn't always win.
 The question isn't whether an attack is coming. The question is whether someone in your organization has the authority and mandate to stop it before it becomes a headline.
 
-### Invest in a CISO before you need one or pay multiples of that cost after.
+## Invest in a CISO before you need one or pay multiples of that cost after.
