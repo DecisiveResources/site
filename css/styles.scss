@@ -25,10 +25,9 @@
 // ../_scss
 @import "../_scss/avatars";
 @import "../_scss/cards";
-@import "../_scss/menus";
-@import "../_scss/navs";
 
 @import "../_scss/landing";
+@import "../_scss/industries";
 
 // Utility classes
 @import "../_scss/utilities";
@@ -85,6 +84,8 @@ a {
 
 // SVG color filters
 .icon-tabler {
+  width: 4em;
+  height: 4em;
   filter: brightness(0) saturate(100%) invert(55%) sepia(50%) saturate(1947%) hue-rotate(159deg) brightness(90%) contrast(108%);
 }
 
@@ -118,7 +119,7 @@ ol, ul {
   max-height: 100%;
 }
 
-.listfeaturedtag .card, .card-footer {
+.listfeaturedtag .card, .listfeaturedtag .card-footer {
 border: 0;
 }
 
@@ -128,12 +129,39 @@ font-weight: 700;
 line-height: 1.25;
 }
 
+// Equal height post navigation cards
+.listfeaturedtag h2.card-title {
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
 .listfeaturedtag h4.card-text, .listrecent h4.card-text {
 color: var(--text-secondary);
 font-size: 0.7rem;
 line-height: 1.5;
 font-weight: 400;
 font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.post-image-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.post-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.previous-next {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #0d1315;
 }
 
 .wrapfooter {
@@ -419,6 +447,13 @@ border-radius: 100%;
   border-radius: 5px;
 }
 
+.service-hero-image {
+  text-align: center;
+  overflow: hidden;
+  vertical-align: middle;
+  max-height: 400px;
+}
+
 .pointerup img {
   position: relative;
   top: 36px;
@@ -526,6 +561,17 @@ border-radius: 100%;
       padding: 1.5rem 1rem 1rem 1rem;
     }
   }
+}
+
+.btn-blog-more {
+  padding: 2rem !important;
+  line-height: 0 !important;
+}
+
+.featured-posts {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 // Ensure blog cards are not affected by service card styles

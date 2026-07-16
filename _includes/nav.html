@@ -5,14 +5,14 @@
     </a>
   </div>
   <div class="text-center show-sm">
-    <div class="navbar-toggle" onclick="toggleMenu()" style="font-size: 32px; padding: 10px; cursor: pointer;">
-      <img class="icon-menu" src="/assets/tabler-icons/icons/article.svg" alt="menu" title="Menu" id="menu-icon"/>
-    </div>
+    <button type="button" class="navbar-toggle" id="navbar-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" style="font-size: 32px; padding: 10px; cursor: pointer; background: transparent; border: none;">
+      <img class="icon-menu" src="/assets/tabler-icons/icons/article.svg" alt="" id="menu-open-icon"/>
+    </button>
   </div>
   <ul class="main-nav" id="mobile-menu">
-    <div class="close-menu show-sm" onclick="toggleMenu()" style="position: absolute; top: 20px; right: 20px; font-size: 32px; color: white; cursor: pointer;">
-      <img class="icon-menu d-none" src="/assets/tabler-icons/icons/article.svg" alt="menu" title="Menu" id="menu-icon"/>
-    </div>
+    <button type="button" class="close-menu show-sm" id="close-menu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; font-size: 32px; color: white; cursor: pointer; background: transparent; border: none;">
+      <img class="icon-menu d-none" src="/assets/tabler-icons/icons/article.svg" alt="" id="menu-close-icon"/>
+    </button>
     {% if site.nav_item_one == null %}
     {% elsif page.url == '/' %}
     {% else %}
@@ -47,22 +47,24 @@
 <script>
 function toggleMenu() {
   const menu = document.getElementById('mobile-menu');
-  const menuIcon = document.getElementById('menu-icon');
-  menu.classList.toggle('active');
-  
-  // Change icon
-  if (menu.classList.contains('active')) {
-    menuIcon.className = 'icon-menu d-none';
-  } else {
-    menuIcon.className = 'icon-menu';
-  }
+  const navbarToggle = document.getElementById('navbar-toggle');
+  const openIcon = document.getElementById('menu-open-icon');
+  const closeIcon = document.getElementById('menu-close-icon');
+  const isOpen = menu.classList.toggle('active');
+
+  navbarToggle.setAttribute('aria-expanded', isOpen);
+  openIcon.classList.toggle('d-none', isOpen);
+  closeIcon.classList.toggle('d-none', !isOpen);
 }
+
+document.getElementById('navbar-toggle').addEventListener('click', toggleMenu);
+document.getElementById('close-menu').addEventListener('click', toggleMenu);
 
 // Close menu when clicking outside
 document.addEventListener('click', function(event) {
   const menu = document.getElementById('mobile-menu');
-  const toggle = document.querySelector('.navbar-toggle');
-  
+  const toggle = document.getElementById('navbar-toggle');
+
   if (menu.classList.contains('active') && !menu.contains(event.target) && !toggle.contains(event.target)) {
     toggleMenu();
   }

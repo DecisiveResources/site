@@ -17,11 +17,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
 }
 
-.super-h1 {
-  font-size: 3rem;
-  font-weight: 600;
-}
-
 .h1,
 .h2,
 .h3,
@@ -178,8 +173,4 @@ dl {
     font-weight: 100;
     font-size: .8em;
   }
-}
-
-.muli {
-  font-family: "Muli", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
 }

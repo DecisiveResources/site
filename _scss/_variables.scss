@@ -2,41 +2,23 @@
 
 // CSS Variables (Custom Properties)
 :root {
-  // Core colors
-  --primary-color: #0d1315;
-  --primary-color-dark: #0d1315;
-  --secondary-color: lightgrey;
-  --secondary-color-dark: #6c757d;
-  --white: #fffffe;
-  --highlight-color: #355f9e;
-
   --brand-color: #00ADEE;
-  
-  // Gray colors
-  --dark-color: #151515;
-  --gray-color: #555555;
-  --gray-color-light: #f5f6ff;
-  --gray-color-dark: #959595;
-  
+
   // Background colors
   --body-bg: #f5f6ff;
   --card-bg: #fff;
   --services-bg: #E6EAEB;
-  
+
   // Text colors
   --text-primary: rgba(0, 0, 0, 0.8);
   --text-secondary: rgba(0, 0, 0, 0.44);
   --text-muted: #6c757d;
-  
+
   // Border colors
   --border-light: rgba(0, 0, 0, 0.125);
-  
+
   // Shadow colors
-  --shadow-light: rgba(55, 65, 80, 0.04);
-  --shadow-main: rgba(55, 65, 80, 0.7);
-  --shadow-hover: rgba(45, 66, 70, 0.1);
   --shadow-video: rgba(55, 106, 117, 0.15);
-  --shadow-image: rgba(55, 106, 117, 0.6);
   --shadow-industries: rgba(0, 0, 0, 0.1);
 }
 
