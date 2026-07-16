@@ -56,7 +56,6 @@ brand_name: Decisive Resources
 header: Decisive Resources
 subheader: A Bespoke Privacy Management and Consulting Firm
 
-meta_image: odin-meta.png
 
 # Social Links
 twitter_username: DecisiveResources
@@ -89,18 +88,14 @@ nav_button_link: /consultation
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-archives
 
-# Pagination 
-paginate: 9
-paginate_path: /page:num/
-posts_per_page: 6
-
-# Performance
-lazyimages: disabled
+# Pagination
+pagination:
+  enabled: true
 
 
 # Exclude from processing.
@@ -113,7 +108,20 @@ lazyimages: disabled
 #
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, _site, wrangler.toml]
 
+# Jekyll ignores underscore-prefixed files by default; _headers must be
+# explicitly included so Cloudflare Pages can read it from the build output.
+include: ["_headers"]
+
 
 sass:
   sass_dir:          _scss
   style:            :compressed
+
+# jekyll-seo-tag only reads a page-level `image` front matter key (no
+# site-wide fallback), so inject a default social-preview image for every
+# page/post here; individual pages can still override with their own `image:`.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/social-media.png
