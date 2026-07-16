@@ -4,12 +4,14 @@
       {% include nav.html %}
       <header class="container grid-xl landing-header">
         <div class="columns pt-12 pb-8">
-          <div class="column col-11 col-mx-auto text-center">
-            <a href="{{ site.url }}{{ site.baseurl }}">
-            <img class="m-4" style="max-width: 10em; border: none;" src="{{ '/assets/logo-b.svg' | relative_url }}" alt="Logo" title="{{ site.title }}"/>
-            </a>
-            <h1 class="mt-2">{{ site.header }}</h1>
-            <h4 class="text-secondary">{{ site.subheader }}</h4>
+          <div class="column col-11 col-mx-auto">
+            <div class="header-brand">
+              <a href="{{ site.url }}{{ site.baseurl }}">
+              <img class="m-4" style="width: 10em; max-width: 10em; border: none; flex-shrink: 0;" src="{{ '/assets/logo-b.svg' | relative_url }}" alt="Logo" title="{{ site.title }}"/>
+              </a>
+              <h1 class="mt-2 text-left">{{ site.header }}</h1>
+            </div>
+            <h4 class="text-secondary mt-2">{{ site.subheader }}</h4>
           </div>
         </div>
       </header>
