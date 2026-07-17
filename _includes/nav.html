@@ -10,32 +10,34 @@
     </button>
   </div>
   <ul class="main-nav" id="mobile-menu">
-    <button type="button" class="close-menu show-sm" id="close-menu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; font-size: 32px; color: white; cursor: pointer; background: transparent; border: none;">
-      <img class="icon-menu d-none" src="/assets/tabler-icons/icons/article.svg" alt="" id="menu-close-icon"/>
-    </button>
+    <li>
+      <button type="button" class="close-menu show-sm" id="close-menu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; font-size: 32px; color: white; cursor: pointer; background: transparent; border: none;">
+        <img class="icon-menu d-none" src="/assets/tabler-icons/icons/article.svg" alt="" id="menu-close-icon"/>
+      </button>
+    </li>
     {% if site.nav_item_one == null %}
     {% elsif page.url == '/' %}
     {% else %}
     <li class="mx-4">
-      <a class="nav-links{% if page.url == site.nav_item_one_link %} disabled{% endif %}" href="{{ site.nav_item_one_link }}">{{ site.nav_item_one }}</a>
+      <a class="nav-links{% if page.url == site.nav_item_one_link %} active{% endif %}" href="{{ site.nav_item_one_link }}">{{ site.nav_item_one }}</a>
     </li>
     {% endif %}
     {% if site.nav_item_two == null %}
     {% else %}
     <li class="mx-4">
-      <a class="nav-links{% if page.url == site.nav_item_two_link %} disabled{% endif %}" href="{{ site.nav_item_two_link }}">{{ site.nav_item_two }}</a>
+      <a class="nav-links{% if page.url == site.nav_item_two_link %} active{% endif %}" href="{{ site.nav_item_two_link }}">{{ site.nav_item_two }}</a>
     </li>
     {% endif %}
     {% if site.nav_item_three == null %}
     {% else %}
     <li class="mx-4">
-      <a class="nav-links{% if page.url == site.nav_item_three_link %} disabled{% endif %}" href="{{ site.nav_item_three_link }}">{{ site.nav_item_three }}</a>
+      <a class="nav-links{% if page.url == site.nav_item_three_link %} active{% endif %}" href="{{ site.nav_item_three_link }}">{{ site.nav_item_three }}</a>
     </li>
     {% endif %}
     {% if site.nav_item_four == null %}
     {% else %}
     <li class="mx-4">
-      <a class="nav-links{% if page.url == site.nav_item_four_link %} disabled{% endif %}" href="{{ site.nav_item_four_link }}">{{ site.nav_item_four }}</a>
+      <a class="nav-links{% if page.url == site.nav_item_four_link %} active{% endif %}" href="{{ site.nav_item_four_link }}">{{ site.nav_item_four }}</a>
     </li>
     {% endif %}
     <li>
