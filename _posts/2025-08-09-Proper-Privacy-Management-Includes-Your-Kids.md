@@ -6,7 +6,7 @@ description: This article explains why effective privacy management for high-pro
 author: Luke
 category: [ leadership, cybersecurity ]
 image: assets/post-images/kids.jpg
-featured: true
+featured: false
 ---
 
 -----
