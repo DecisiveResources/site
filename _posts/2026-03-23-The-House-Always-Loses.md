@@ -4,7 +4,7 @@ title: "The House Always Loses Without a CISO"
 description: The Most Risk-Savvy Industry in the World Is Taking Its Biggest Gamble on Cybersecurity
 author: Mishaal
 category: [ vCISO ]
-image: assets/post-images/The House Always Loses.jpg
+image: assets/post-images/the-house-always-loses.jpg
 featured: false
 ---
 

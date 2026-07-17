@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "The Fastest Way to Lose Wealth Has Nothing to Do With the Market"
-description: Comprehensive privacy management is a finacial control in preventing wealth from being stolen.
+description: Comprehensive privacy management is a financial control in preventing wealth from being stolen.
 author: Luke
 category: [ leadership, privacy management ]
-image: assets/post-images/wealth management.jpg
+image: assets/post-images/wealth-management.jpg
 featured: false
 ---
 

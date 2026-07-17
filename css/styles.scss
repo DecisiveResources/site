@@ -395,7 +395,7 @@ border-radius: 100%;
   img {
     width: 4em;
     height: 4em;
-    background-color: #E6EAEB;
+    background-color: var(--services-bg);
     border-radius: 10px;
     padding: 10px;
   }

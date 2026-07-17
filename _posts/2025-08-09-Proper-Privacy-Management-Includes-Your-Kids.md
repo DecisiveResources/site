@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Proper Privacy Managemment Includes Your Kids"
+title: "Proper Privacy Management Includes Your Kids"
 subtitle: "Why Alias Accounts and Cybersecurity Start at Home"
 description: This article explains why effective privacy management for high-profile families must include protecting children’s digital lives. It highlights how kids’ online activities can expose the entire household to risk, and outlines practical steps—like using alias accounts and compartmentalized credentials—to safeguard your family’s privacy from social media, gaming, and data brokers.
 author: Luke

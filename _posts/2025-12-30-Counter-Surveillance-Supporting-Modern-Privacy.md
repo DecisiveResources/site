@@ -4,7 +4,7 @@ title: "Counter-Surveillance as a Supporting Layer of Modern Privacy"
 description: Good counter-surveillance techniques, when implemented in daily life, supports the overall privacy infrastructure.
 author: Luke
 category: [ leadership, privacy management ]
-image: assets/post-images/Counter Surveillance.jpg
+image: assets/post-images/counter-surveillance.jpg
 featured: false
 ---
 
