@@ -4,7 +4,7 @@ title: "You Will Be Profiled by AI. Unless You Become Unreadable"
 description: AI is being used to profile you without your consent and privacy management is the only way to prevent it.
 author: Luke
 category: [ leadership, privacy management ]
-image: assets/post-images/AI Defense.jpg
+image: assets/post-images/ai-defense.jpg
 featured: false
 ---
 

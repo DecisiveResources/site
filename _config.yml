@@ -85,7 +85,6 @@ nav_button_link: /consultation
 
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
@@ -108,9 +107,10 @@ pagination:
 #
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, _site, wrangler.toml]
 
-# Jekyll ignores underscore-prefixed files by default; _headers must be
-# explicitly included so Cloudflare Pages can read it from the build output.
-include: ["_headers"]
+# Jekyll ignores underscore-prefixed files by default; _headers and
+# _redirects must be explicitly included so Cloudflare Pages can read
+# them from the build output.
+include: ["_headers", "_redirects"]
 
 
 sass:

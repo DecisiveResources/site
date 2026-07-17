@@ -9,14 +9,14 @@
   link: "/vciso"
 
 - name: "Personal Cyber Crisis Management"
-  description: "A data‑driven SEO service that elevates your brand by placing authoritative content at the top of Google while pushing unwanted results down to later pages."
+  description: "When you've been hacked or compromised, our rapid-response service secures your accounts, stops ongoing intrusions, and restores your digital security."
   icon: "crosshair"
   link: "/pccm"
 
-- name: "Due Dillegence"
-  description: "Providing due dillegence, background investigations, and strategic intelligence and analysis to help clients make informed decisions."
+- name: "Due Diligence"
+  description: "Providing due diligence, background investigations, and strategic intelligence and analysis to help clients make informed decisions."
   icon: "checkup-list"
-  link: "/due-dillegence"
+  link: "/due-diligence"
 
 - name: "Investigations"
   description: "Blending open‑source intel, expert surveillance, and certified investigators to deliver rapid, in‑depth digital forensics and threat‑hunting for precise target profiling."
