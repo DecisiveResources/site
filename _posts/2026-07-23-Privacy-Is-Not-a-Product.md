@@ -5,7 +5,7 @@ description: What Real Privacy Looks Like and What Seperates Us
 author: Luke
 category: [ Privacy Management ]
 image: assets/post-images/Privacy-Not-a-Product.png
-featured: false
+featured: true
 ---
 Most people who come to us have already tried. They have a VPN.
 They pay for a data broker removal service. Maybe they've set up masked
