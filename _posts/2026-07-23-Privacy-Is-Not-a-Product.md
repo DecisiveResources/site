@@ -76,4 +76,4 @@ about it.
 That is the premise. Comprehensive coverage, built by hand, held
 by humans who know you. If a subscription is all you need, there are
 good ones, and we will happily tell you which. If you want someone to
-own and manage the problem for you, that is 
+own and manage the problem for you, that is us.
