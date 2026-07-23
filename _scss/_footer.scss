@@ -21,6 +21,14 @@
       display: inline-block;
     }
   }
+  .footer-legal-links a {
+    display: inline-block;
+    color: $gray-color;
+    font-weight: normal;
+    &:hover {
+      color: $highlight-color;
+    }
+  }
   p {
     color: $gray-color;
     font-size: 0.8em;
