@@ -6,7 +6,7 @@ description: This article provides a step-by-step survival guide for individuals
 author: Luke
 category: [ leadership, cybersecurity ]
 image: assets/post-images/hacked-phone.jpg
-featured: true
+featured: false
 ---
 
 -----
