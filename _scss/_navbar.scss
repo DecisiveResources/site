@@ -75,13 +75,40 @@
   font-weight: 700;
   color: $white;
   &.active {
-    color: $error;
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
 .main-nav li {
   text-align: center;
   margin: 15px auto;
+}
+
+.main-nav .dropdown-menu {
+  position: static;
+  display: block;
+  float: none;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 10px 0 0;
+
+  .dropdown-item {
+    color: $white;
+    font-size: 1rem;
+    padding: 10px;
+    background: transparent;
+
+    &:hover, &:focus {
+      background: rgba(255, 255, 255, 0.1);
+      color: $white;
+    }
+
+    &.active {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
 }
 
 .logo {
@@ -152,12 +179,36 @@
                       }
                     }
                     & a.active {
-                      color: $error;
+                      color: rgba(255, 255, 255, 0.5);
                       border: 2px solid transparent;
                       text-decoration: none;
                     }
               }
         }
 
-  }  
+        .dropdown-menu {
+          position: absolute;
+          display: none;
+          float: left;
+          margin-top: 10px;
+          padding: 8px 0;
+          background: $primary-color-dark;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+          .dropdown-item {
+            font-family: $header-font-family;
+            padding: 8px 20px;
+
+            &:hover, &:focus {
+              background: rgba(56, 189, 248, 0.12);
+              color: #38bdf8;
+            }
+          }
+        }
+
+        .dropdown-menu.show {
+          display: block;
+        }
+  }
 }
