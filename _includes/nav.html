@@ -28,6 +28,13 @@
       <a class="nav-links{% if page.url == site.nav_item_two_link %} active{% endif %}" href="{{ site.nav_item_two_link }}">{{ site.nav_item_two }}</a>
     </li>
     {% endif %}
+    <li class="mx-4 dropdown">
+      <a class="nav-links dropdown-toggle{% if page.url == '/crosshair' %} active{% endif %}" href="#"
+         id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+      <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+        <li><a class="dropdown-item{% if page.url == '/crosshair' %} active{% endif %}" href="/crosshair">Crosshair</a></li>
+      </ul>
+    </li>
     {% if site.nav_item_three == null %}
     {% else %}
     <li class="mx-4">
