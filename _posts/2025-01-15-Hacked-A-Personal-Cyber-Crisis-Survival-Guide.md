@@ -94,5 +94,5 @@ You can't afford to figure this out as you go. If you're a high-value target, be
 
 We are your contingency plan.
 
-[**Decisive Resources – Personal Cyber Crisis Management**]({{ site.baseurl }}/pccm/)\
+[**Decisive Resources – Personal Cyber Crisis Management**]({{ site.baseurl }}/Personal-Cyber-Crisis-Management/)\
 When it's your life on the line, we don't troubleshoot. We take action.
