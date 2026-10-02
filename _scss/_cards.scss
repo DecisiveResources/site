@@ -83,6 +83,24 @@
     }
   }
 
+  .maxthumb {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
   .card-image {
     padding-top: $layout-spacing-lg;
     position: relative;
@@ -109,5 +127,35 @@
         right: 6px;
       }
     }
+  }
+}
+
+// Bootstrap's row/col flex doesn't reliably equalize card height per
+// row here, so force it with grid instead. Selectors are compounded
+// with .listrecent (rather than bare .row/.col-lg-4/.card-group) so
+// they outweigh bootstrap.min.css's single-class rules, which load
+// after this stylesheet and would otherwise win on specificity ties.
+.row.listrecent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $layout-spacing-lg;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  > .col-lg-4,
+  > .col-md-6 {
+    width: auto;
+    margin: 0;
+  }
+
+  .card-group {
+    display: block;
+    height: 100%;
   }
 }
