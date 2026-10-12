@@ -48,8 +48,12 @@ authors:
       web: https://www.decisiveresources.com
       linkedin: https://www.linkedin.com/company/decisiveresources/
       description: "A Bespoke Privacy Management and Consulting Firm"
-
-
+    Lindsey:
+      display_name: Lindsey Yagi-Hatake
+      avatar: 'assets/img/logo-b.svg'
+      web: https://www.decisiveresources.com
+      linkedin: https://www.linkedin.com/in/lindseyhatake/
+      description: "OSINT Investigator, Privacy Manager"
 
 brand_logo: logo-b.svg
 brand_name: Decisive Resources
