@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Privacy Is Not a Product"
-description: What Real Privacy Looks Like and What Seperates Us
+description: What Real Privacy Looks Like and What Separates Us
 author: Luke
 category: [ Privacy Management ]
 image: assets/post-images/Privacy-Not-a-Product.png
