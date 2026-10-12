@@ -50,7 +50,7 @@ authors:
       description: "A Bespoke Privacy Management and Consulting Firm"
     Lindsey:
       display_name: Lindsey Yagi-Hatake
-      avatar: 'assets/img/logo-b.svg'
+      avatar: 'assets/img/lindsey.png'
       web: https://www.decisiveresources.com
       linkedin: https://www.linkedin.com/in/lindseyhatake/
       description: "OSINT Investigator, Privacy Manager"
