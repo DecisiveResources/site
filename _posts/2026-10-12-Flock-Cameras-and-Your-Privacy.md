@@ -18,7 +18,7 @@ But there's a difference between someone seeing your car at an intersection and 
 
 You've probably noticed surveillance cameras in everyday places, even parking lots outside stores like Home Depot. You might have driven right past one without giving it a second thought.
 
-But here's the question: ****What happens to that information after you drive away?****
+But here's the question: **What happens to that information after you drive away?**
 
 That's the privacy debate surrounding Flock Safety's automated license plate readers.
 
@@ -46,7 +46,7 @@ These observations can be stored and searched, allowing authorized users to iden
 
 One camera captures a vehicle.
 
-****A network of cameras can reveal patterns.****
+**A network of cameras can reveal patterns.**
 
 Your commute. Your regular stops. Places you visit repeatedly.
 
@@ -58,7 +58,7 @@ This is a familiar principle in open-source intelligence (OSINT): ordinary infor
 
 As we discuss in our article on [counter-surveillance and modern privacy](https://www.decisiveresources.com/Counter-Surveillance-Supporting-Modern-Privacy), everyday routines can create patterns of exposure that extend beyond the digital world.
 
-****Information doesn't have to be secret to become sensitive when it's connected.****
+**Information doesn't have to be secret to become sensitive when it's connected.**
 
 ## Five Ways to Understand and Reduce Your Flock Camera Exposure
 
