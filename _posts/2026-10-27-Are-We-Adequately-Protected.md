@@ -2,7 +2,7 @@
 layout: post
 title: "Are We Adequately Protected?"
 description: Are your cybersecurity and physical security teams working together or leaving critical gaps exposed? Discover how Greyhaven Advisory and Decisive Resources are bridging security disciplines, strengthening executive accountability, and helping organizations build a coordinated approach to risk management.
-author: Lindsey
+author: Luke
 category: [ privacy, cybersecurity ]
 image: assets/post-images/Greyhaven-Decisive-Resources.png
 featured: false
