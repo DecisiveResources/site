@@ -3,7 +3,7 @@ layout: page
 title: Crosshair
 permalink: /crosshair
 subtitle: "Where intelligence meets precision"
-description: "Crosshair is Decisive Resources' investigative case-management platform — centralized reporting, visual intelligence, and enterprise-grade security in one command center."
+description: "Crosshair is Decisive Resources' investigative case-management platform — centralized reporting, visual intelligence, screening, and enterprise-grade security in one command center."
 ---
 
 <style>
@@ -40,7 +40,7 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
 
   .crosshair-capabilities {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 16px;
     text-align: center;
   }
@@ -64,12 +64,357 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
     margin-bottom: 4px;
   }
 
-  .crosshair-deepdive h5 {
-    margin-bottom: 4px;
+  /* ---------- Feature tab explorer ---------- */
+  .feature-explorer {
+    background: linear-gradient(180deg, #eef3fa, #e7eef8);
+    border: 1px solid #dde6f2;
+    border-radius: 16px;
+    padding: 10px;
+    margin-top: 16px;
   }
 
-  .crosshair-deepdive .column {
-    margin-bottom: 18px;
+  .feature-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin: 0;
+    padding: 4px 4px 10px;
+    list-style: none;
+  }
+
+  .feature-tabs li {
+    margin: 0;
+  }
+
+  .feature-tabs button {
+    appearance: none;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #5b6678;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    line-height: 1.2;
+  }
+
+  .feature-tabs button:hover {
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--text-primary);
+  }
+
+  .feature-tabs button.active {
+    background: #fff;
+    color: var(--brand-color);
+    box-shadow: 0 6px 16px rgba(45, 65, 100, 0.14);
+  }
+
+  .feature-body {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(45, 65, 100, 0.08);
+  }
+
+  @media (max-width: 840px) {
+    .feature-body {
+      padding: 14px;
+    }
+  }
+
+  .feature-panel {
+    display: none;
+  }
+
+  .feature-panel.active {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: center;
+    animation: featureFade 0.25s ease;
+  }
+
+  .feature-panel > .column {
+    width: 100% !important;
+  }
+
+  @media (max-width: 840px) {
+    .feature-panel.active {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @keyframes featureFade {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .feature-panel .feature-tagline {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand-color);
+    margin-bottom: 2px;
+  }
+
+  .feature-panel h4 {
+    margin: 0 0 8px;
+  }
+
+  .feature-panel ul {
+    margin-top: 10px;
+  }
+
+  .feature-panel ul li {
+    margin-bottom: 6px;
+  }
+
+  .feature-img img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+
+  /* ---------- Isometric scene (matches the rendered screenshots) ---------- */
+  .iso-scene {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background:
+      radial-gradient(120% 120% at 15% 10%, #f6f9fe 0%, #e9f0fa 45%, #dde8f6 100%);
+    padding: 44px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 340px;
+  }
+
+  .iso-scene::before,
+  .iso-scene::after {
+    content: "";
+    position: absolute;
+    border-radius: 14px;
+    background: rgba(173, 199, 235, 0.25);
+    z-index: 0;
+  }
+
+  .iso-scene::before { width: 180px; height: 70px; top: 8%; right: -40px; transform: rotate(-8deg); }
+  .iso-scene::after  { width: 220px; height: 80px; bottom: 6%; left: -60px; transform: rotate(-8deg); }
+
+  .iso-tilt {
+    transform: perspective(1600px) rotateX(10deg) rotateY(13deg) rotateZ(-4deg);
+    transform-style: preserve-3d;
+    width: 100%;
+    max-width: 480px;
+    z-index: 1;
+  }
+
+  .iso-screen {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+      -14px 18px 0 -4px #c3cfe2,
+      -24px 34px 50px rgba(45, 65, 100, 0.28);
+    font-size: 11px;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .iso-side {
+    flex: 0 0 26%;
+    background: #15181f;
+    color: #cfd6e4;
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .iso-brand {
+    color: #fff;
+    font-weight: 700;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    margin-bottom: 6px;
+    white-space: nowrap;
+  }
+
+  .iso-brand::before {
+    content: "◎";
+    color: var(--brand-color);
+    margin-right: 5px;
+  }
+
+  .iso-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 8.5px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    white-space: nowrap;
+    color: #9aa3b5;
+  }
+
+  .iso-nav::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    background: #4a5366;
+    flex: 0 0 auto;
+  }
+
+  .iso-nav.on {
+    background: #2f7df6;
+    color: #fff;
+  }
+
+  .iso-nav.on::before { background: #fff; }
+
+  .iso-main {
+    flex: 1;
+    padding: 12px 14px;
+    background: linear-gradient(180deg, #fbfcfe, #f4f7fc);
+    min-width: 0;
+  }
+
+  .iso-title {
+    font-weight: 700;
+    font-size: 12.5px;
+    color: #1c2430;
+    margin-bottom: 2px;
+  }
+
+  .iso-sub {
+    font-size: 8.5px;
+    color: #7d8699;
+    margin-bottom: 10px;
+  }
+
+  .iso-stats {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .iso-stat {
+    border-radius: 8px;
+    padding: 6px 9px;
+    font-size: 8px;
+    font-weight: 600;
+    flex: 1 1 0;
+    min-width: 58px;
+  }
+
+  .iso-stat b { display: block; font-size: 13px; line-height: 1.1; }
+  .iso-stat.red   { background: #fdeaea; color: #cf4444; }
+  .iso-stat.amber { background: #fdf3df; color: #cd8a12; }
+  .iso-stat.blue  { background: #e8f1fd; color: #2f7df6; }
+  .iso-stat.green { background: #e6f6ec; color: #2e9e5b; }
+
+  .iso-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #e6ebf3;
+    border-radius: 8px;
+    padding: 6px 9px;
+    margin-bottom: 6px;
+    font-size: 8.5px;
+    color: #39414f;
+  }
+
+  .iso-row small { color: #8b94a6; font-size: 7.5px; display: block; }
+
+  .iso-pill {
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 7.5px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .iso-pill.red   { background: #fdeaea; color: #cf4444; }
+  .iso-pill.amber { background: #fdf3df; color: #cd8a12; }
+  .iso-pill.green { background: #e6f6ec; color: #2e9e5b; }
+  .iso-pill.blue  { background: #e8f1fd; color: #2f7df6; }
+  .iso-pill.grey  { background: #eef1f6; color: #8b94a6; }
+
+  .iso-bar {
+    height: 6px;
+    border-radius: 999px;
+    background: #e6ebf3;
+    overflow: hidden;
+    margin: 4px 0 10px;
+  }
+
+  .iso-bar i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #2f7df6, var(--brand-color));
+  }
+
+  .iso-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .iso-mini {
+    background: #fff;
+    border: 1px solid #e6ebf3;
+    border-radius: 8px;
+    padding: 7px 8px;
+    font-size: 8px;
+    color: #39414f;
+  }
+
+  .iso-mini b { display: block; font-size: 8.5px; margin-bottom: 2px; color: #1c2430; }
+  .iso-mini.dim { opacity: 0.45; }
+
+  .iso-chip {
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(45, 65, 100, 0.18);
+    padding: 8px 12px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #39414f;
+    z-index: 2;
+    transform: rotate(-6deg);
+    line-height: 1.3;
+  }
+
+  .iso-chip small { display: block; font-weight: 400; color: #8b94a6; font-size: 8px; }
+
+  .iso-chip::after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--brand-color);
+    margin-top: 5px;
+  }
+
+  .iso-chip.tl { top: 14px; left: 14px; }
+  .iso-chip.br { bottom: 14px; right: 14px; transform: rotate(-6deg) translateZ(0); }
+
+  @media (max-width: 840px) {
+    .iso-scene { min-height: 300px; padding: 40px 14px; }
+    .iso-chip.tl { left: 8px; }
+    .iso-chip.br { right: 8px; }
   }
 </style>
 
@@ -78,17 +423,19 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
 
     <div class="column col-12 col-md-7">
       <div class="content m-0 mx-md-4">
-        <p class="crosshair-eyebrow text-secondary">OSINT Investigation &amp; Case Reporting</p>
+        <p class="crosshair-eyebrow text-secondary">OSINT Investigation, Screening &amp; Case Reporting</p>
         <p class="crosshair-lead">Your investigators do the work. Crosshair keeps it organized.</p>
         <p>
           Crosshair eliminates the grind of intelligence reporting. Spend less time building the
-          report and more time connecting the dots.
+          report and more time connecting the dots — from intake and OSINT collection through
+          screening, risk scoring, and a polished report in PDF or Word.
         </p>
         <p>
           Every case in Crosshair is built by hand — your investigators, your OSINT tools, your
-          judgment. AI plays a narrow, supporting role: helping surface patterns across large data
-          pulls, never producing findings or writing the report. The work stays human; Crosshair just
-          makes it easier to centralize, report, and track.
+          judgment. AI plays a narrow, supporting role: drafting summaries you edit, suggesting next
+          steps you approve, surfacing patterns across large data pulls — never producing findings or
+          writing the report for you. The work stays human; Crosshair just makes it easier to
+          centralize, report, and track.
         </p>
         <p class="text-secondary">
           <em>Crosshair is currently available by invitation only.</em> <a href="/consultation">Reach out</a> to inquire about access.
@@ -112,8 +459,8 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
         <p class="text-secondary m-0">Cut case assembly time, not corners.</p>
         <ul>
           <li>Bring your own OSINT tools and workflow — Crosshair doesn't replace how you investigate, it centralizes what you produce.</li>
-          <li>Guided resource checklists per category keep coverage consistent without dictating methodology.</li>
-          <li>One-click export turns your notes and findings into a finished report.</li>
+          <li>Guided due-diligence checklists per category keep coverage consistent, and OSINT Automate runs your selected resources and connected sources in one scan.</li>
+          <li>Capture evidence with sources, screenshots, dates, and map locations — then export a finished report in one click.</li>
         </ul>
       </div>
     </div>
@@ -125,23 +472,11 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
         <p class="text-secondary m-0">Prioritize risk, not paperwork.</p>
         <ul>
           <li>Auto-scored risk profiles and due-diligence coverage tracking give oversight without chasing status updates.</li>
-          <li>Role-based access shows Admins, Managers, and Clients exactly what they need — no more, no less.</li>
-          <li>Compare multiple assessments side by side to track how risk changes over time.</li>
+          <li>Role-based access shows Admins, Investigators, and Clients exactly what they need — no more, no less.</li>
+          <li>Clients get their own portal: questionnaires, report downloads, and email notifications they control.</li>
         </ul>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="card my-3">
-  <div class="card-body text-center m-1">
-    <h3>The Command Center For Every Investigation</h3>
-    <p class="text-secondary">
-      Centralized reporting, case management, and tracking — for work your team already knows how to do.
-    </p>
-          <div class="placeholder-shot">
-<img class="img-fluid" src="assets/img/dashboard.png" alt="Crosshair Screenshot">
-      </div>
   </div>
 </div>
 
@@ -154,18 +489,329 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
         <strong>Centralize</strong>case data
       </div>
       <div class="cap-item">
-        <img class="cap-icon" src="/assets/tabler-icons/icons/file-text.svg" alt="Structure and export reports"/>
-        <strong>Structure</strong>and export reports
+        <img class="cap-icon" src="/assets/tabler-icons/icons/zoom-check.svg" alt="Surface patterns across large datasets"/>
+        <strong>Surface</strong>patterns across data
       </div>
       <div class="cap-item">
-        <img class="cap-icon" src="/assets/tabler-icons/icons/zoom-check.svg" alt="Surface patterns across large datasets"/>
-        <strong>Surface</strong>patterns across large datasets
+        <img class="cap-icon" src="/assets/tabler-icons/icons/shield-half.svg" alt="Screen people against sanctions, licenses, and records"/>
+        <strong>Screen</strong>people and vendors
+      </div>
+      <div class="cap-item">
+        <img class="cap-icon" src="/assets/tabler-icons/icons/file-text.svg" alt="Structure and export reports"/>
+        <strong>Report</strong>in PDF &amp; Word
       </div>
       <div class="cap-item">
         <img class="cap-icon" src="/assets/tabler-icons/icons/checkup-list.svg" alt="Track roadmap and follow-up"/>
-        <strong>Track</strong>roadmap and follow-up
+        <strong>Track</strong>roadmap &amp; follow-up
       </div>
     </div>
+  </div>
+</div>
+
+<!-- ================= Feature tab explorer ================= -->
+<div class="card my-3">
+  <div class="card-body m-1 m-md-3">
+    <h3 class="mt-3 text-center">The Command Center For Every Investigation</h3>
+    <p class="text-secondary text-center">
+      One platform from first contact to final report. Pick a feature to see it in action.
+    </p>
+
+    <div class="feature-explorer">
+    <ul class="feature-tabs" role="tablist" aria-label="Crosshair features">
+      <li><button type="button" class="active" data-tab="dashboard" role="tab" aria-selected="true">Target Dashboard</button></li>
+      <li><button type="button" data-tab="findings" role="tab" aria-selected="false">Findings &amp; Evidence</button></li>
+      <li><button type="button" data-tab="visual" role="tab" aria-selected="false">Visual Intelligence</button></li>
+      <li><button type="button" data-tab="roadmap" role="tab" aria-selected="false">Roadmap &amp; Next Steps</button></li>
+      <li><button type="button" data-tab="screening" role="tab" aria-selected="false">Screening</button></li>
+      <li><button type="button" data-tab="intake" role="tab" aria-selected="false">Questionnaire &amp; Intake</button></li>
+      <li><button type="button" data-tab="reports" role="tab" aria-selected="false">Reports</button></li>
+      <li><button type="button" data-tab="security" role="tab" aria-selected="false">Security &amp; Control</button></li>
+    </ul>
+
+    <div class="feature-body">
+
+    <!-- Target Dashboard -->
+    <div class="feature-panel active columns" id="panel-dashboard" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Everything about a target, on one screen</p>
+        <h4>Target Dashboard</h4>
+        <p>
+          Every target gets a live command center: risk at a glance, investigation progress, and the
+          story so far — built from the evidence your team collects, not from status meetings.
+        </p>
+        <ul>
+          <li>Findings by severity, due-diligence coverage, objectives, timeline, and key findings in one view.</li>
+          <li>An AI-drafted summary you edit and approve, with version history and an "out of date" flag when the case moves on.</li>
+          <li>Live monitoring card surfaces new public mentions of your target as they appear.</li>
+          <li>Risk scoring that rolls up from every finding — impact × likelihood, weighted by category.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="feature-img">
+          <img class="img-fluid" src="assets/img/dashboard.png" alt="Crosshair target dashboard">
+        </div>
+      </div>
+    </div>
+
+    <!-- Findings -->
+    <div class="feature-panel columns" id="panel-findings" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Evidence that holds up</p>
+        <h4>Findings &amp; Evidence</h4>
+        <p>
+          Capture evidence as you investigate — organized by category, graded for confidence, and
+          linked into a bigger picture.
+        </p>
+        <ul>
+          <li>Every finding carries sources, screenshots, event dates, map locations, and a rich-text write-up — with "Draft with AI" for a first pass you refine.</li>
+          <li>Admiralty confidence grading: NATO-standard source reliability × information credibility on every finding.</li>
+          <li>Link related findings ("same phone number"), trace every change in the finding's history, and spin a new target directly from a discovery.</li>
+          <li>"So What?" analysis connects a finding to the attacker tactics and real-world threats it enables.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="feature-img">
+          <img class="img-fluid" src="assets/img/findings.png" alt="Crosshair findings view">
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Intelligence -->
+    <div class="feature-panel columns" id="panel-visual" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">See the connections</p>
+        <h4>Visual Intelligence</h4>
+        <p>
+          Mind maps turn scattered findings into a connected picture — linking targets, contacts, and
+          events so patterns emerge at a glance instead of buried across dozens of report pages.
+        </p>
+        <ul>
+          <li>Interactive mind map of every target, category, and finding — or an entire multi-target investigation on one canvas.</li>
+          <li>Pattern-of-life mapping plots finding locations and key countries on a world map.</li>
+          <li>Maps are redrawn automatically inside exported reports, so the visual story travels with the document.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="feature-img">
+          <img class="img-fluid" src="assets/img/mindmap.png" alt="Crosshair mind map">
+        </div>
+      </div>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="feature-panel columns" id="panel-roadmap" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">From findings to fixes</p>
+        <h4>Roadmap &amp; Next Steps</h4>
+        <p>
+          Findings are only half the job. Crosshair turns recommendations into a plan your client can
+          actually execute — and shows progress against it.
+        </p>
+        <ul>
+          <li>Every category produces next steps that can be marked applicable, complete, or risk-accepted — each with a start date and duration.</li>
+          <li>A Gantt-style roadmap lays the whole plan on a timeline, with a today line and progress tracking.</li>
+          <li>"Plan with AI" proposes a schedule from the questionnaire, findings, and objectives — and never touches steps you've completed or risk-accepted.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="feature-img">
+          <img class="img-fluid" src="assets/img/Roadmap.png" alt="Crosshair roadmap">
+        </div>
+      </div>
+    </div>
+
+    <!-- Screening -->
+    <div class="feature-panel columns" id="panel-screening" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Know who you're dealing with</p>
+        <h4>Screening</h4>
+        <p>
+          Run a person through identity, sanctions, license, and criminal-record checks in one pass —
+          and keep watching them after the hire or engagement, not just before it.
+        </p>
+        <ul>
+          <li>Check groups cover identity, healthcare sanctions and exclusions, global watchlists and sanctions, professional licenses, criminal and sex-offender records, and education verification.</li>
+          <li>Every result lands as Clear, Needs review, or Consider — with evidence attached and a reviewer verdict, including "false match".</li>
+          <li>Automatic re-checks on your schedule, per-person monitoring, and email alerts when something changes.</li>
+          <li>AI-drafted person summary you can edit, and a full screening report exported to PDF.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Screen once<small>then monitor continuously</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CROSSHAIR</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav on">Screening</div>
+                <div class="iso-nav">Investigations</div>
+                <div class="iso-nav">Reports</div>
+                <div class="iso-nav">Settings</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Screening</div>
+                <div class="iso-sub">Identity · Sanctions · Licenses · Records · Education</div>
+                <div class="iso-stats">
+                  <div class="iso-stat red"><b>3</b>Consider</div>
+                  <div class="iso-stat amber"><b>5</b>Needs review</div>
+                  <div class="iso-stat green"><b>42</b>Clear</div>
+                </div>
+                <div class="iso-row"><span>J. Rivera<small>Identity verified · 6/6 checks run</small></span><span class="iso-pill green">Clear</span></div>
+                <div class="iso-row"><span>M. Chen<small>Watchlist partial match</small></span><span class="iso-pill amber">Needs review</span></div>
+                <div class="iso-row"><span>D. Okafor<small>License lapsed · state record found</small></span><span class="iso-pill red">Consider</span></div>
+                <div class="iso-row"><span>A. Moreau<small>Monitored · re-check in 12 days</small></span><span class="iso-pill blue">Monitored</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Automatic re-checks<small>alerts when results change</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Questionnaire & Intake -->
+    <div class="feature-panel columns" id="panel-intake" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Start every case clean</p>
+        <h4>Questionnaire &amp; Intake</h4>
+        <p>
+          Structured intake for both sides of the house: a client-friendly questionnaire for privacy
+          engagements, and an investigator's interview form for OSINT cases.
+        </p>
+        <ul>
+          <li>Questionnaire sections appear as cards that open in a focused drawer — with smart rules, so clients only answer what applies to them.</li>
+          <li>Send a secure public link: no account needed, autosave as they type, an expiry date, and automatic lock on submission.</li>
+          <li>The Intake builder gives investigators templated interview forms — individual, company, or case-level — with red-flag rules that color-code the target.</li>
+          <li>Staff-only answers stay hidden from clients and client-facing exports.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Public link<small>no sign-in needed · autosave</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CROSSHAIR</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav on">Questionnaire</div>
+                <div class="iso-nav">Intake</div>
+                <div class="iso-nav">Reports</div>
+                <div class="iso-nav">Settings</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Questionnaire</div>
+                <div class="iso-sub">7 of 10 sections complete</div>
+                <div class="iso-bar"><i style="width:68%"></i></div>
+                <div class="iso-cards">
+                  <div class="iso-mini"><b>About you</b><span class="iso-pill green">Done</span></div>
+                  <div class="iso-mini"><b>Home &amp; family</b><span class="iso-pill amber">In progress</span></div>
+                  <div class="iso-mini"><b>Online accounts</b><span class="iso-pill grey">Not started</span></div>
+                  <div class="iso-mini dim"><b>Executive travel</b><span class="iso-pill grey">Not applicable</span></div>
+                </div>
+                <div class="iso-row" style="margin-top:8px;"><span>Intake · Individual<small>2 red flags · staff-only notes</small></span><span class="iso-pill red">Critical</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Smart rules<small>sections adapt to the answers</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reports -->
+    <div class="feature-panel columns" id="panel-reports" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">One click from case file to deliverable</p>
+        <h4>Reports</h4>
+        <p>
+          The report is the product. Crosshair assembles yours — branded, complete, and consistent —
+          from the work you've already done.
+        </p>
+        <ul>
+          <li>Export the same report to polished PDF or editable Word, in English or Spanish.</li>
+          <li>Privacy assessment, per-target OSINT, or full investigation reports — one chapter per target.</li>
+          <li>Branded cover, editable preambles, AI-drafted executive summary, charts, mind map, roadmap, and questionnaire appendix.</li>
+          <li>Each report shows what changed since the previous assessment: findings added, resolved, and unchanged.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">PDF &amp; Word<small>English · Español</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CROSSHAIR</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav">Findings</div>
+                <div class="iso-nav on">Reports</div>
+                <div class="iso-nav">Roadmap</div>
+                <div class="iso-nav">Settings</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Generate Report</div>
+                <div class="iso-sub">Privacy assessment · Q4 2026</div>
+                <div class="iso-stats">
+                  <div class="iso-stat blue"><b>24</b>Findings</div>
+                  <div class="iso-stat green"><b>6</b>Resolved</div>
+                  <div class="iso-stat amber"><b>4</b>New</div>
+                </div>
+                <div class="iso-row"><span>Executive summary<small>AI-drafted · reviewed by you</small></span><span class="iso-pill blue">Ready</span></div>
+                <div class="iso-row"><span>Mind map &amp; charts<small>redrawn for print</small></span><span class="iso-pill blue">Ready</span></div>
+                <div class="iso-row"><span>Changes since last assessment<small>+4 added · 6 resolved · 14 unchanged</small></span><span class="iso-pill green">Included</span></div>
+                <div class="iso-row"><span>Export<small>your logo, your preambles</small></span><span><span class="iso-pill blue">PDF</span> <span class="iso-pill grey">Word</span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Client portal<small>clients download their own reports</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security -->
+    <div class="feature-panel columns" id="panel-security" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Your cases, your boundary</p>
+        <h4>Security &amp; Control</h4>
+        <p>
+          Investigative material deserves more than a password. Crosshair enforces strong sign-in for
+          everyone and keeps each organization's data sealed off — even from the platform operator.
+        </p>
+        <ul>
+          <li>A second factor is mandatory from the first sign-in: passkey or hardware key (Face ID, Touch ID, YubiKey), or authenticator app with recovery codes.</li>
+          <li>Tenant privacy by architecture: the platform's super admin cannot open your organization or read your cases.</li>
+          <li>A full audit log — sign-ins, role changes, exports, downloads — with location, filters, and CSV export.</li>
+          <li>Device and session management with automatic idle sign-out.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Sealed tenants<small>even super admin stays out</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CROSSHAIR</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav">Members</div>
+                <div class="iso-nav on">Security</div>
+                <div class="iso-nav">Audit log</div>
+                <div class="iso-nav">Settings</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Security</div>
+                <div class="iso-sub">Protect your account · required for all members</div>
+                <div class="iso-row"><span>Passkey / security key<small>Face ID · Touch ID · YubiKey</small></span><span class="iso-pill green">Active</span></div>
+                <div class="iso-row"><span>Authenticator app<small>recovery codes stored</small></span><span class="iso-pill green">Active</span></div>
+                <div class="iso-row"><span>Audit log<small>sign-in · export · role change · IP &amp; browser</small></span><span class="iso-pill blue">Recording</span></div>
+                <div class="iso-row"><span>Sessions<small>2 devices · idle sign-out at 60 min</small></span><span class="iso-pill grey">Manage</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Self-host option<small>runs in your data center</small></div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
   </div>
 </div>
 
@@ -175,9 +821,9 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
       <div class="card-body m-1 mx-md-3">
         <h5>Internal Investigation Teams</h5>
         <ul>
-          <li>Streamline internal case reporting</li>
-          <li>Unify case data, notes, and evidence in one workspace</li>
-          <li>Track due diligence and roadmap progress automatically</li>
+          <li>Streamline internal case reporting from intake to close</li>
+          <li>Unify case data, notes, and evidence in one workspace — with live collaborative notes</li>
+          <li>Track due diligence, screening, and roadmap progress automatically</li>
         </ul>
       </div>
     </div>
@@ -189,7 +835,7 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
         <ul>
           <li>Securely share case access across organizations</li>
           <li>Role-based visibility for partner agencies and clients</li>
-          <li>Centralized comparison across multiple assessments</li>
+          <li>Centralized comparison across multiple assessments over time</li>
         </ul>
       </div>
     </div>
@@ -202,56 +848,10 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
     <p class="text-secondary mx-md-6">
       Crosshair keeps case data in one encrypted database instead of scattered across spreadsheets,
       documents, and inboxes, with integrations to the external OSINT tools your team already relies
-      on. For teams that need it, that same platform can run entirely inside your own data center —
-      more on that below.
+      on. Bring your own storage bucket, your own email server, even your own AI — including models
+      that run entirely on your own hardware — or switch AI off altogether. And for teams that need
+      it, the whole platform can run inside your own data center.
     </p>
-  </div>
-</div>
-
-<div class="card my-3">
-  <h3 class="mt-5 text-center">Centralized Investigation Management</h3>
-  <div class="card-body columns m-1 mx-md-3 crosshair-deepdive">
-    <div class="column col-12 col-md-6">
-      <h5>Report as You Go</h5>
-      <p>
-        Capture evidence, screenshots, and notes as you investigate, write your own findings and recommendations, and export a polished report in one click.
-      </p>
-    
-      <h5>One Case, Start to Close</h5>
-      <p>
-        Intake, OSINT, reporting, and roadmap tracking live in one case file.
-      </p>
-  
-    <h5>Everything in One Hub</h5>
-    <p>
-      Mind maps and pattern-of-life analysis reveal relationships between targets, associates, and events.
-    </p>
-      </div>
-    <div class="column col-12 col-md-6">
-    
-      <div class="placeholder-shot">
-        <img class="img-fluid" src="assets/img/findings.png" alt="Crosshair Screenshot">
-      </div>
-    </div>
-    
-    </div>
-
-</div>
-
-<div class="card my-3">
-  <h3 class="mt-5 text-center">Visual Intelligence</h3>
-  <div class="card-body m-0 m-md-4">
-    <p>
-      Mind maps turn scattered findings into a connected picture — linking targets, contacts, and
-      events so patterns of life emerge at a glance instead of buried across dozens of report pages.
-    </p>
-  </div>
-  <div class="card-body columns mx-3">
-    <div class="column col-12">
-      <div class="placeholder-shot">
-      <img class="img-fluid" src="assets/img/mindmap.png" alt="Crosshair Screenshot">
-      </div>
-    </div>
   </div>
 </div>
 
@@ -259,9 +859,11 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
   <h3 class="mt-5 text-center">Security &amp; Privacy By Design</h3>
   <div class="card-body m-0 m-md-4">
     <p>
-      Every case is protected by an encrypted database and multi-factor authentication — authenticator
-      app, hardware key, or backup codes — with security and privacy built in from the ground up
-      rather than bolted on.
+      Every case is protected by an encrypted database and mandatory strong authentication — passkeys
+      and hardware keys, or an authenticator app with recovery codes — with security and privacy
+      built in from the ground up rather than bolted on. Each organization's data is sealed at the
+      platform level: not even Crosshair's own operators can open a tenant, and a deleted
+      organization is permanently erased after its 30-day restore window.
     </p>
     <p>
       For clients who can't put sensitive case data on shared infrastructure, Crosshair can be
@@ -285,8 +887,30 @@ description: "Crosshair is Decisive Resources' investigative case-management pla
   <div class="card-body text-center m-1">
     <h3>Built For The Work You Already Do</h3>
     <p class="text-secondary">
+      Installable on desktop and mobile, available in English and Spanish, with dark mode built in.
       Crosshair is built for teams who can't afford to miss what matters. It's currently available by
       invitation — <a href="/consultation">reach out</a> to see if it's a fit.
     </p>
   </div>
 </div>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.feature-tabs button');
+    tabs.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        tabs.forEach(function (b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.feature-panel').forEach(function (p) {
+          p.classList.remove('active');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        var panel = document.getElementById('panel-' + btn.dataset.tab);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  })();
+</script>
