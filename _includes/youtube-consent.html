@@ -1,0 +1,22 @@
+{% comment %}
+  YouTube video that loads nothing from Google until the visitor clicks play (EU/UK consent for YouTube's cookies).
+  The thumbnail is self-hosted in assets/img/video/<id>.jpg; the player comes from youtube-nocookie.com after the click.
+  Without JavaScript the link opens the video on YouTube.
+  Usage: {% include youtube-consent.html id="VIDEO_ID" title="Video title" %}
+{% endcomment %}
+<div class="responsive-video yt-consent">
+  <a class="yt-consent-play" href="https://www.youtube.com/watch?v={{ include.id }}"
+     data-yt-id="{{ include.id }}" data-yt-title="{{ include.title | escape }}"
+     aria-label="Play video: {{ include.title | escape }} (loads YouTube)">
+    <img src="{{ site.baseurl }}/assets/img/video/{{ include.id }}.jpg" alt="" loading="lazy" width="1280" height="720">
+    <span class="yt-consent-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg>
+    </span>
+    <span class="yt-consent-note">Playing loads the video from YouTube, which may set cookies.</span>
+  </a>
+</div>
+<p class="yt-consent-privacy text-muted small mt-2 mb-0">
+  See our <a href="{{ site.baseurl }}/privacy-policy">Privacy Policy</a> and
+  <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>.
+</p>
+<script src="{{ site.baseurl }}/assets/js/youtube-consent.js" defer></script>
