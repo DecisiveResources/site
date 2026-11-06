@@ -1,0 +1,1070 @@
+---
+layout: page
+title: CISO Dashboard
+permalink: /ciso-dashboard
+subtitle: "Run your whole security practice from one place"
+description: "CISO Dashboard is Decisive Resources' security assessment and vCISO operations platform — six compliance frameworks, client roadmaps, budgetary planning, third-party risk, and board-ready reports."
+---
+
+<style>
+  .ciso-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .ciso-lead {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .ciso-capabilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    text-align: center;
+  }
+
+  .ciso-capabilities .cap-item {
+    padding: 12px;
+  }
+
+  .ciso-capabilities .cap-icon {
+    width: 4em;
+    height: 4em;
+    background-color: var(--services-bg);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto 12px;
+    display: block;
+  }
+
+  .ciso-capabilities .cap-item strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ---------- Feature tab explorer ---------- */
+  .feature-explorer {
+    background: linear-gradient(180deg, #eef3fa, #e7eef8);
+    border: 1px solid #dde6f2;
+    border-radius: 16px;
+    padding: 10px;
+    margin-top: 16px;
+  }
+
+  .feature-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin: 0;
+    padding: 4px 4px 10px;
+    list-style: none;
+  }
+
+  .feature-tabs li {
+    margin: 0;
+  }
+
+  .feature-tabs button {
+    appearance: none;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #5b6678;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    line-height: 1.2;
+  }
+
+  .feature-tabs button:hover {
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--text-primary);
+  }
+
+  .feature-tabs button.active {
+    background: #fff;
+    color: var(--brand-color);
+    box-shadow: 0 6px 16px rgba(45, 65, 100, 0.14);
+  }
+
+  .feature-body {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(45, 65, 100, 0.08);
+  }
+
+  @media (max-width: 840px) {
+    .feature-body {
+      padding: 14px;
+    }
+  }
+
+  .feature-panel {
+    display: none;
+  }
+
+  .feature-panel.active {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: center;
+    animation: featureFade 0.25s ease;
+  }
+
+  .feature-panel > .column {
+    width: 100% !important;
+  }
+
+  @media (max-width: 840px) {
+    .feature-panel.active {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @keyframes featureFade {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .feature-panel .feature-tagline {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand-color);
+    margin-bottom: 2px;
+  }
+
+  .feature-panel h4 {
+    margin: 0 0 8px;
+  }
+
+  .feature-panel ul {
+    margin-top: 10px;
+  }
+
+  .feature-panel ul li {
+    margin-bottom: 6px;
+  }
+
+  /* ---------- Isometric scene ---------- */
+  .iso-scene {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background:
+      radial-gradient(120% 120% at 15% 10%, #f6f9fe 0%, #e9f0fa 45%, #dde8f6 100%);
+    padding: 44px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 340px;
+  }
+
+  .iso-scene::before,
+  .iso-scene::after {
+    content: "";
+    position: absolute;
+    border-radius: 14px;
+    background: rgba(173, 199, 235, 0.25);
+    z-index: 0;
+  }
+
+  .iso-scene::before { width: 180px; height: 70px; top: 8%; right: -40px; transform: rotate(-8deg); }
+  .iso-scene::after  { width: 220px; height: 80px; bottom: 6%; left: -60px; transform: rotate(-8deg); }
+
+  .iso-tilt {
+    transform: perspective(1600px) rotateX(10deg) rotateY(13deg) rotateZ(-4deg);
+    transform-style: preserve-3d;
+    width: 100%;
+    max-width: 480px;
+    z-index: 1;
+  }
+
+  .iso-screen {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+      -14px 18px 0 -4px #c3cfe2,
+      -24px 34px 50px rgba(45, 65, 100, 0.28);
+    font-size: 11px;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .iso-side {
+    flex: 0 0 26%;
+    background: #15181f;
+    color: #cfd6e4;
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .iso-brand {
+    color: #fff;
+    font-weight: 700;
+    font-size: 8px;
+    letter-spacing: 0.14em;
+    margin-bottom: 6px;
+    white-space: nowrap;
+  }
+
+  .iso-brand::before {
+    content: "▣";
+    color: var(--brand-color);
+    margin-right: 5px;
+  }
+
+  .iso-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 8.5px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    white-space: nowrap;
+    color: #9aa3b5;
+  }
+
+  .iso-nav::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    background: #4a5366;
+    flex: 0 0 auto;
+  }
+
+  .iso-nav.on {
+    background: #2f7df6;
+    color: #fff;
+  }
+
+  .iso-nav.on::before { background: #fff; }
+
+  .iso-main {
+    flex: 1;
+    padding: 12px 14px;
+    background: linear-gradient(180deg, #fbfcfe, #f4f7fc);
+    min-width: 0;
+  }
+
+  .iso-title {
+    font-weight: 700;
+    font-size: 12.5px;
+    color: #1c2430;
+    margin-bottom: 2px;
+  }
+
+  .iso-sub {
+    font-size: 8.5px;
+    color: #7d8699;
+    margin-bottom: 10px;
+  }
+
+  .iso-stats {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .iso-stat {
+    border-radius: 8px;
+    padding: 6px 9px;
+    font-size: 8px;
+    font-weight: 600;
+    flex: 1 1 0;
+    min-width: 58px;
+  }
+
+  .iso-stat b { display: block; font-size: 13px; line-height: 1.1; }
+  .iso-stat.red   { background: #fdeaea; color: #cf4444; }
+  .iso-stat.amber { background: #fdf3df; color: #cd8a12; }
+  .iso-stat.blue  { background: #e8f1fd; color: #2f7df6; }
+  .iso-stat.green { background: #e6f6ec; color: #2e9e5b; }
+
+  .iso-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #e6ebf3;
+    border-radius: 8px;
+    padding: 6px 9px;
+    margin-bottom: 6px;
+    font-size: 8.5px;
+    color: #39414f;
+  }
+
+  .iso-row small { color: #8b94a6; font-size: 7.5px; display: block; }
+
+  .iso-pill {
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 7.5px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .iso-pill.red   { background: #fdeaea; color: #cf4444; }
+  .iso-pill.amber { background: #fdf3df; color: #cd8a12; }
+  .iso-pill.green { background: #e6f6ec; color: #2e9e5b; }
+  .iso-pill.blue  { background: #e8f1fd; color: #2f7df6; }
+  .iso-pill.grey  { background: #eef1f6; color: #8b94a6; }
+
+  .iso-bar {
+    height: 6px;
+    border-radius: 999px;
+    background: #e6ebf3;
+    overflow: hidden;
+    margin: 4px 0 10px;
+  }
+
+  .iso-bar i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #2f7df6, var(--brand-color));
+  }
+
+  .iso-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .iso-mini {
+    background: #fff;
+    border: 1px solid #e6ebf3;
+    border-radius: 8px;
+    padding: 7px 8px;
+    font-size: 8px;
+    color: #39414f;
+  }
+
+  .iso-mini b { display: block; font-size: 8.5px; margin-bottom: 2px; color: #1c2430; }
+  .iso-mini.dim { opacity: 0.45; }
+
+  /* Gantt rows for roadmap mockup */
+  .iso-gantt {
+    background: #fff;
+    border: 1px solid #e6ebf3;
+    border-radius: 8px;
+    padding: 8px 9px;
+    margin-bottom: 6px;
+  }
+
+  .iso-gantt .g-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    color: #39414f;
+    margin-bottom: 4px;
+  }
+
+  .iso-gantt .g-track {
+    height: 8px;
+    border-radius: 999px;
+    background: #eef1f6;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .iso-gantt .g-track i {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 999px;
+  }
+
+  /* Risk matrix mockup */
+  .iso-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  .iso-matrix span {
+    border-radius: 6px;
+    text-align: center;
+    font-size: 7.5px;
+    font-weight: 700;
+    padding: 8px 2px;
+  }
+
+  .iso-chip {
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(45, 65, 100, 0.18);
+    padding: 8px 12px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #39414f;
+    z-index: 2;
+    transform: rotate(-6deg);
+    line-height: 1.3;
+  }
+
+  .iso-chip small { display: block; font-weight: 400; color: #8b94a6; font-size: 8px; }
+
+  .iso-chip::after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--brand-color);
+    margin-top: 5px;
+  }
+
+  .iso-chip.tl { top: 14px; left: 14px; }
+  .iso-chip.br { bottom: 14px; right: 14px; }
+
+  @media (max-width: 840px) {
+    .iso-scene { min-height: 300px; padding: 40px 14px; }
+    .iso-chip.tl { left: 8px; }
+    .iso-chip.br { right: 8px; }
+  }
+</style>
+
+<div class="card">
+  <div class="card-body columns my-4">
+
+    <div class="column col-12 col-md-6">
+      <div class="content m-0 mx-md-4">
+        <p class="ciso-eyebrow text-secondary">Security Assessments, Compliance &amp; vCISO Operations</p>
+        <p class="ciso-lead">Every client. Every framework. One dashboard.</p>
+        <p>
+          CISO Dashboard is the operating platform for security assessment practices: run HIPAA,
+          NIST, CIS, PCI, CMMC, and SAFER assessments across all your clients, turn the gaps into a
+          budgeted roadmap, watch your clients' vendors, and hand over a board-ready report — without
+          living in spreadsheets.
+        </p>
+        <p>
+          Your expertise drives every answer. AI plays a supporting role — drafting the report
+          narrative, suggesting a roadmap order, pre-filling vendor questionnaires from their own
+          documents — and everything it writes stays editable, versioned, and under your review.
+        </p>
+        <p class="text-secondary">
+          <em>CISO Dashboard is currently available by invitation only.</em> <a href="/consultation">Reach out</a> to inquire about access.
+        </p>
+      </div>
+    </div>
+    <div class="column col-12 col-md-6 mt-3 mt-md-0">
+      <div class="iso-scene">
+        <div class="iso-chip tl">Your whole practice<small>clients, scores, activity</small></div>
+        <div class="iso-tilt">
+          <div class="iso-screen">
+            <div class="iso-side">
+              <div class="iso-brand">CISO DASHBOARD</div>
+              <div class="iso-nav on">Dashboard</div>
+              <div class="iso-nav">Clients</div>
+              <div class="iso-nav">Assessments</div>
+              <div class="iso-nav">Third parties</div>
+              <div class="iso-nav">Reports</div>
+            </div>
+            <div class="iso-main">
+              <div class="iso-title">Dashboard</div>
+              <div class="iso-sub">Everything your practice is working on</div>
+              <div class="iso-stats">
+                <div class="iso-stat blue"><b>12</b>Clients</div>
+                <div class="iso-stat green"><b>74</b>Avg score</div>
+                <div class="iso-stat amber"><b>8</b>Open findings</div>
+              </div>
+              <div class="iso-row"><span>Widget Corp · HIPAA SRA 3.7<small>In review · score 76</small></span><span class="iso-pill blue">In review</span></div>
+              <div class="iso-row"><span>Acme Clinics · NIST CSF 2.0<small>Open for input · 64% answered</small></span><span class="iso-pill amber">Open</span></div>
+              <div class="iso-row"><span>North Labs · CIS Controls 8.1<small>Finalized · report generated</small></span><span class="iso-pill green">Final</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="iso-chip br">Six frameworks<small>HIPAA · NIST · CIS · PCI · CMMC · SAFER</small></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="columns my-3">
+  <div class="column col-12 col-md-6">
+    <div class="card h-100">
+      <div class="card-body m-1 mx-md-3">
+        <h5>For vCISOs, Assessors &amp; MSPs</h5>
+        <p class="text-secondary m-0">Run more clients without more chaos.</p>
+        <ul>
+          <li>One workspace for every client: assessments, snapshots, roadmaps, vendors, and reports — with assessors seeing only the clients assigned to them.</li>
+          <li>Copy an assessment forward each year and show the client exactly what changed, with year-over-year comparison built in.</li>
+          <li>Import what already exists: filled-in HHS SRA Tool and CIS workbooks come in with answers intact.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="column col-12 col-md-6">
+    <div class="card h-100">
+      <div class="card-body m-1 mx-md-3">
+        <h5>For Your Clients</h5>
+        <p class="text-secondary m-0">A portal, not a PDF attachment.</p>
+        <ul>
+          <li>Client contributors answer questions and rate risks directly while an assessment is open for input; executives get read-only access to everything about their organization.</li>
+          <li>Clients see their own roadmap live — status, owners, and costs — and can update progress on their items.</li>
+          <li>Reports arrive branded with their logo, with an executive summary that reads like it was written for the board, because it was.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card my-3">
+  <h3 class="mt-5 text-center">From First Question To Funded Roadmap</h3>
+  <div class="card-body m-1 m-md-3">
+    <div class="ciso-capabilities">
+      <div class="cap-item">
+        <img class="cap-icon" src="/assets/tabler-icons/icons/checkup-list.svg" alt="Assess against six frameworks"/>
+        <strong>Assess</strong>six frameworks
+      </div>
+      <div class="cap-item">
+        <img class="cap-icon" src="/assets/tabler-icons/icons/alert-triangle.svg" alt="Score and rank risk"/>
+        <strong>Score</strong>and rank risk
+      </div>
+      <div class="cap-item">
+        <img class="cap-icon" src="/assets/tabler-icons/icons/zoom-money.svg" alt="Budget the fixes"/>
+        <strong>Budget</strong>the fixes
+      </div>
+      <div class="cap-item">
+        <img class="cap-icon" src="/assets/tabler-icons/icons/calendar-week.svg" alt="Plan the roadmap"/>
+        <strong>Plan</strong>the roadmap
+      </div>
+      <div class="cap-item">
+        <img class="cap-icon" src="/assets/tabler-icons/icons/file-text.svg" alt="Report to the board"/>
+        <strong>Report</strong>to the board
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Feature tab explorer ================= -->
+<div class="card my-3">
+  <div class="card-body m-1 m-md-3">
+    <h3 class="mt-3 text-center">One Platform For The Whole Engagement</h3>
+    <p class="text-secondary text-center">
+      From intake to board report. Pick a feature to see it in action.
+    </p>
+
+    <div class="feature-explorer">
+    <ul class="feature-tabs" role="tablist" aria-label="CISO Dashboard features">
+      <li><button type="button" class="active" data-tab="dashboard" role="tab" aria-selected="true">Practice Dashboard</button></li>
+      <li><button type="button" data-tab="snapshot" role="tab" aria-selected="false">Client Snapshot</button></li>
+      <li><button type="button" data-tab="assessments" role="tab" aria-selected="false">Assessments</button></li>
+      <li><button type="button" data-tab="risk" role="tab" aria-selected="false">Risk &amp; Scoring</button></li>
+      <li><button type="button" data-tab="roadmap" role="tab" aria-selected="false">Budget &amp; Roadmap</button></li>
+      <li><button type="button" data-tab="tprm" role="tab" aria-selected="false">Third-Party Risk</button></li>
+      <li><button type="button" data-tab="reports" role="tab" aria-selected="false">Reports</button></li>
+      <li><button type="button" data-tab="security" role="tab" aria-selected="false">Security &amp; Control</button></li>
+    </ul>
+
+    <div class="feature-body">
+
+    <!-- Practice Dashboard -->
+    <div class="feature-panel active columns" id="panel-dashboard" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Your whole practice at a glance</p>
+        <h4>Practice Dashboard</h4>
+        <p>
+          Open the app and know where every engagement stands: which assessments are moving, which
+          clients need attention, and how the practice is trending.
+        </p>
+        <ul>
+          <li>KPI tiles for assessments, average score, reports, users, questionnaires, and third-party risk across all clients.</li>
+          <li>Assessment status and per-framework breakdowns, with twelve months of activity trends.</li>
+          <li>Latest assessments and recent activity feeds, so nothing stalls quietly.</li>
+          <li>Plan usage at a glance — clients, users, and storage against your subscription.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Live across clients<small>status, scores, trends</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CISO DASHBOARD</div>
+                <div class="iso-nav on">Dashboard</div>
+                <div class="iso-nav">Clients</div>
+                <div class="iso-nav">Assessments</div>
+                <div class="iso-nav">Third parties</div>
+                <div class="iso-nav">Reports</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Dashboard</div>
+                <div class="iso-sub">Last 12 months</div>
+                <div class="iso-stats">
+                  <div class="iso-stat blue"><b>28</b>Assessments</div>
+                  <div class="iso-stat green"><b>74</b>Avg score</div>
+                  <div class="iso-stat amber"><b>31</b>Reports</div>
+                </div>
+                <div class="iso-cards">
+                  <div class="iso-mini"><b>Assessment status</b>5 open · 4 in review · 19 final</div>
+                  <div class="iso-mini"><b>By framework</b>HIPAA 12 · NIST 7 · CIS 5</div>
+                </div>
+                <div class="iso-row" style="margin-top:8px;"><span>Widget Corp · HIPAA SRA<small>updated 2h ago</small></span><span class="iso-pill blue">In review</span></div>
+                <div class="iso-row"><span>Acme Clinics · NIST CSF<small>client answering</small></span><span class="iso-pill amber">Open for input</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Nothing stalls quietly<small>activity &amp; status feeds</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client Snapshot -->
+    <div class="feature-panel columns" id="panel-snapshot" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Know the client before the first question</p>
+        <h4>Client Snapshot</h4>
+        <p>
+          A living, one-screen profile of each client — their environment, their people, their
+          worries — that feeds straight into assessments and reports.
+        </p>
+        <ul>
+          <li>Highlights capture pain points, fears, sensitive data, and goals in the client's own words.</li>
+          <li>Security products in place across ~20 areas — EDR, SIEM, MFA, backup, cyber insurance — as logo pills from a curated catalog.</li>
+          <li>Key individuals with photos: CEO, CIO, security and compliance officers — who later show up as roadmap owners.</li>
+          <li>Everything autosaves and appears as the "existing environment" section of the report.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">One screen per client<small>edited in place · autosave</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CISO DASHBOARD</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav on">Clients</div>
+                <div class="iso-nav">Assessments</div>
+                <div class="iso-nav">Third parties</div>
+                <div class="iso-nav">Reports</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Widget Corp — Snapshot</div>
+                <div class="iso-sub">Healthcare · widgetcorp.com</div>
+                <div class="iso-cards">
+                  <div class="iso-mini"><b>Pain points</b>Audit fatigue · legacy EHR</div>
+                  <div class="iso-mini"><b>Goals</b>Pass OCR audit · cut cyber premium</div>
+                </div>
+                <div class="iso-row" style="margin-top:8px;"><span>Security products<small>EDR · SIEM · MFA · Backup · 11 more</small></span><span class="iso-pill green">15 in place</span></div>
+                <div class="iso-row"><span>Key individuals<small>CEO · CIO · Security Officer · Compliance</small></span><span class="iso-pill blue">5 people</span></div>
+                <div class="iso-row"><span>Service providers<small>MSP · EHR vendor · payroll</small></span><span class="iso-pill grey">8 listed</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Feeds the report<small>becomes "existing environment"</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Assessments -->
+    <div class="feature-panel columns" id="panel-assessments" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Six frameworks, one workflow</p>
+        <h4>Assessments</h4>
+        <p>
+          HIPAA SRA 3.7, NIST CSF 2.0, CIS Controls 8.1, PCI DSS v4, CMMC 2.0, and SAFER — each with
+          its own scales and tools, all in the same Draft → Open for input → In review → Final flow.
+        </p>
+        <ul>
+          <li>Color-coded question cards with notes, flags for review, and framework-native scales — CIS implementation levels, NIST current vs. target tiers, PCI in-place/CCW, CMMC met/not-met with POA&amp;M.</li>
+          <li>Clients answer directly while the assessment is open for input — no emailed spreadsheets.</li>
+          <li>Import a filled-in HHS SRA Tool or CIS workbook and keep every answer.</li>
+          <li>Copy any assessment forward to start next year's in minutes.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Framework-native<small>each standard keeps its own scales</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CISO DASHBOARD</div>
+                <div class="iso-nav">Overview</div>
+                <div class="iso-nav on">Framework</div>
+                <div class="iso-nav">Notes</div>
+                <div class="iso-nav">Budgetary</div>
+                <div class="iso-nav">Reports</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">HIPAA SRA 3.7</div>
+                <div class="iso-sub">Widget Corp · In review · 142 questions</div>
+                <div class="iso-bar"><i style="width:76%"></i></div>
+                <div class="iso-row"><span>Access management<small>§164.312(a) · unique user IDs enforced</small></span><span class="iso-pill green">Yes</span></div>
+                <div class="iso-row"><span>Encryption at rest<small>§164.312(a)(2)(iv) · laptops unencrypted</small></span><span class="iso-pill red">No</span></div>
+                <div class="iso-row"><span>Contingency plan<small>§164.308(a)(7) · draft exists, untested</small></span><span class="iso-pill amber">Partial</span></div>
+                <div class="iso-row"><span>Audit controls<small>flagged for review by J. Doe</small></span><span class="iso-pill blue">Flagged</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Import workbooks<small>HHS SRA Tool · CIS · JSON</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risk & Scoring -->
+    <div class="feature-panel columns" id="panel-risk" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Numbers the board can argue about</p>
+        <h4>Risk &amp; Scoring</h4>
+        <p>
+          Every framework scores 0–100 by category and overall, and HIPAA adds a full threat
+          register — so "how are we doing?" always has a defensible answer.
+        </p>
+        <ul>
+          <li>Threats &amp; vulnerabilities register with likelihood × impact ratings rolling into a risk matrix.</li>
+          <li>Answer safety by category shows exactly where the weak spots cluster.</li>
+          <li>Comparison across assessments charts the score year over year — proof the engagement is working.</li>
+          <li>An AI summary with a single Top Action distills each assessment to what matters most right now.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Likelihood × impact<small>every threat rated</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CISO DASHBOARD</div>
+                <div class="iso-nav on">Overview</div>
+                <div class="iso-nav">Framework</div>
+                <div class="iso-nav">Notes</div>
+                <div class="iso-nav">Budgetary</div>
+                <div class="iso-nav">Reports</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Risk Matrix</div>
+                <div class="iso-sub">38 threats rated · HIPAA SRA</div>
+                <div class="iso-matrix">
+                  <span style="background:#fdf3df;color:#cd8a12;">4</span>
+                  <span style="background:#fdeaea;color:#cf4444;">3</span>
+                  <span style="background:#f8d7d7;color:#b53232;">2</span>
+                  <span style="background:#e6f6ec;color:#2e9e5b;">6</span>
+                  <span style="background:#fdf3df;color:#cd8a12;">9</span>
+                  <span style="background:#fdeaea;color:#cf4444;">1</span>
+                  <span style="background:#dff0e6;color:#27824c;">8</span>
+                  <span style="background:#e6f6ec;color:#2e9e5b;">4</span>
+                  <span style="background:#fdf3df;color:#cd8a12;">1</span>
+                </div>
+                <div class="iso-row"><span>Ransomware via phishing<small>High likelihood · High impact</small></span><span class="iso-pill red">Critical</span></div>
+                <div class="iso-row"><span>Lost unencrypted laptop<small>Medium · High</small></span><span class="iso-pill amber">High</span></div>
+                <div class="iso-row"><span>Score vs last year<small>61 → 76 overall</small></span><span class="iso-pill green">+15</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Year over year<small>comparison across assessments</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Budget & Roadmap -->
+    <div class="feature-panel columns" id="panel-roadmap" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">From gap to funded project</p>
+        <h4>Budget &amp; Roadmap</h4>
+        <p>
+          Findings don't fix themselves. Price every recommendation in the Budgetary Assessment, then
+          lay the work out on a client-wide Gantt roadmap the client can actually follow.
+        </p>
+        <ul>
+          <li>Each budget row is internal (hours × your rate) or external (dollar range), with min–max totals and a cost-split chart — exportable to Excel.</li>
+          <li>"Add from assessments" pulls budget rows, scoring gaps, and high/critical HIPAA risks onto the roadmap in one click.</li>
+          <li>Items carry workstream, priority, status, costs, and an owner picked from the client's key individuals.</li>
+          <li>AI "Suggest" proposes an order with a reason for each item — nothing moves until you apply it.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Priced &amp; sequenced<small>internal hours or external spend</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CISO DASHBOARD</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav on">Clients</div>
+                <div class="iso-nav">Assessments</div>
+                <div class="iso-nav">Third parties</div>
+                <div class="iso-nav">Reports</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Roadmap — Widget Corp</div>
+                <div class="iso-sub">18 items · $42k–$68k planned</div>
+                <div class="iso-stats">
+                  <div class="iso-stat blue"><b>5</b>In progress</div>
+                  <div class="iso-stat red"><b>2</b>Overdue</div>
+                  <div class="iso-stat green"><b>7</b>Done</div>
+                </div>
+                <div class="iso-gantt">
+                  <div class="g-label"><span>Laptop encryption rollout</span><span>Q1</span></div>
+                  <div class="g-track"><i style="left:4%;width:34%;background:#2f7df6;"></i></div>
+                </div>
+                <div class="iso-gantt">
+                  <div class="g-label"><span>Incident response tabletop</span><span>Q2</span></div>
+                  <div class="g-track"><i style="left:30%;width:28%;background:#2e9e5b;"></i></div>
+                </div>
+                <div class="iso-gantt">
+                  <div class="g-label"><span>SIEM onboarding (external)</span><span>Q2–Q3</span></div>
+                  <div class="g-track"><i style="left:46%;width:42%;background:#cd8a12;"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">AI Suggest<small>proposed order, you approve</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third-Party Risk -->
+    <div class="feature-panel columns" id="panel-tprm" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Your clients' vendors are your problem too</p>
+        <h4>Third-Party Risk</h4>
+        <p>
+          A full vendor risk program per client, plus a roll-up across your whole practice —
+          inventory, tiering, questionnaires, public-data signals, and findings through to closure.
+        </p>
+        <ul>
+          <li>Continuous public signals: CISA KEV, breach history, OFAC/OIG/SAM exclusions, SEC cyber incidents, sanctions lists, plus email and web security checks (SPF, DMARC, TLS, and more).</li>
+          <li>Vendors answer security questionnaires through an emailed link — no account — with AI pre-fill from their own SOC 2, CAIQ, or HECVAT documents, quoting page and source.</li>
+          <li>Findings get owners and 30/60/90-day due dates by severity, and vendors get a fix link to respond.</li>
+          <li>Fourth-party view shows shared providers and vendors several clients depend on.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Always watching<small>KEV · breaches · sanctions · DNS</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CISO DASHBOARD</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav">Clients</div>
+                <div class="iso-nav">Assessments</div>
+                <div class="iso-nav on">Third parties</div>
+                <div class="iso-nav">Reports</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Third parties</div>
+                <div class="iso-sub">Widget Corp · 25 vendors</div>
+                <div class="iso-stats">
+                  <div class="iso-stat red"><b>2</b>Critical tier</div>
+                  <div class="iso-stat amber"><b>6</b>Open findings</div>
+                  <div class="iso-stat green"><b>17</b>Assessed</div>
+                </div>
+                <div class="iso-row"><span>CloudEHR Inc.<small>SOC 2 pre-filled · questionnaire 92% done</small></span><span class="iso-pill red">Critical</span></div>
+                <div class="iso-row"><span>MailFlow<small>DMARC missing · breach 2024</small></span><span class="iso-pill amber">High</span></div>
+                <div class="iso-row"><span>ShredSafe<small>exclusion lists clear · TLS ok</small></span><span class="iso-pill green">Low</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Vendor exchange<small>answers shared with consent</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reports -->
+    <div class="feature-panel columns" id="panel-reports" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">The deliverable that wins the renewal</p>
+        <h4>Reports</h4>
+        <p>
+          One click assembles the whole engagement into a hyperlinked, dual-branded document — PDF,
+          Word, or live preview — that reads like a consultancy wrote it for weeks.
+        </p>
+        <ul>
+          <li>Cover with "Prepared for" and "Prepared by" logos, framework preamble, and an AI-written executive summary you can edit, with version history.</li>
+          <li>Charts, risk matrix, year-over-year comparison, existing environment from the Snapshot, budgetary assessment, and the roadmap — plus an appendix of every response.</li>
+          <li>Areas of success alongside the risks, so the client hears what's working too.</li>
+          <li>Every saved report lives on one Reports page across all clients; data also exports to Excel, CSV, and re-importable JSON.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">PDF &amp; Word<small>plus live preview</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CISO DASHBOARD</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav">Clients</div>
+                <div class="iso-nav">Assessments</div>
+                <div class="iso-nav">Third parties</div>
+                <div class="iso-nav on">Reports</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Generate Report</div>
+                <div class="iso-sub">Widget Corp · HIPAA SRA 3.7 · 2026</div>
+                <div class="iso-row"><span>Executive summary<small>AI-drafted · edited by you · v3</small></span><span class="iso-pill blue">Ready</span></div>
+                <div class="iso-row"><span>Risk matrix &amp; comparison<small>vs. 2025 assessment</small></span><span class="iso-pill blue">Ready</span></div>
+                <div class="iso-row"><span>Budgetary assessment &amp; roadmap<small>$42k–$68k · 18 items</small></span><span class="iso-pill green">Included</span></div>
+                <div class="iso-row"><span>Export<small>dual-branded · hyperlinked contents</small></span><span><span class="iso-pill blue">PDF</span> <span class="iso-pill grey">Word</span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Dual branded<small>your logo and the client's</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security -->
+    <div class="feature-panel columns" id="panel-security" role="tabpanel">
+      <div class="column col-12 col-md-5">
+        <p class="feature-tagline">Practice what you assess</p>
+        <h4>Security &amp; Control</h4>
+        <p>
+          A compliance platform has to clear its own bar. CISO Dashboard enforces strong sign-in,
+          isolates every tenant, and keeps an audit trail of everything.
+        </p>
+        <ul>
+          <li>Mandatory MFA from day one: passkeys and security keys (Face ID, Touch ID, YubiKey) or authenticator app, with recovery codes and idle sign-out.</li>
+          <li>Strict tenant isolation, with assessors limited to their assigned clients and secrets encrypted with AES-256-GCM.</li>
+          <li>Uploads are malware-scanned; nightly encrypted backups go to tamper-proof storage.</li>
+          <li>A 12-month audit trail with CSV export — and sharing across organizations is explicit, audited, and revocable.</li>
+        </ul>
+      </div>
+      <div class="column col-12 col-md-7">
+        <div class="iso-scene">
+          <div class="iso-chip tl">Tenant isolation<small>every client walled off</small></div>
+          <div class="iso-tilt">
+            <div class="iso-screen">
+              <div class="iso-side">
+                <div class="iso-brand">CISO DASHBOARD</div>
+                <div class="iso-nav">Dashboard</div>
+                <div class="iso-nav">Users</div>
+                <div class="iso-nav on">Security</div>
+                <div class="iso-nav">Audit log</div>
+                <div class="iso-nav">Settings</div>
+              </div>
+              <div class="iso-main">
+                <div class="iso-title">Account &amp; Security</div>
+                <div class="iso-sub">Required for every member</div>
+                <div class="iso-row"><span>Passkey / security key<small>Face ID · Touch ID · YubiKey</small></span><span class="iso-pill green">Active</span></div>
+                <div class="iso-row"><span>Authenticator app<small>recovery codes stored</small></span><span class="iso-pill green">Active</span></div>
+                <div class="iso-row"><span>Audit log<small>sign-ins · exports · sharing · 12 months</small></span><span class="iso-pill blue">Recording</span></div>
+                <div class="iso-row"><span>Backups<small>nightly · encrypted · object-locked</small></span><span class="iso-pill green">Current</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="iso-chip br">Bring your own<small>storage bucket · AI provider · SMTP</small></div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="columns my-3">
+  <div class="column col-12 col-md-6">
+    <div class="card h-100">
+      <div class="card-body m-1 mx-md-3">
+        <h5>vCISO Practices &amp; MSPs</h5>
+        <ul>
+          <li>Standardize every engagement across six frameworks</li>
+          <li>Assign assessors per client with least-privilege access</li>
+          <li>Scale from a handful of clients to unlimited on the MSP plan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="column col-12 col-md-6">
+    <div class="card h-100">
+      <div class="card-body m-1 mx-md-3">
+        <h5>Internal Security &amp; Compliance Teams</h5>
+        <ul>
+          <li>Assess your own organization — your org is always a client too</li>
+          <li>Track remediation on a roadmap executives can read</li>
+          <li>Share assessments with auditors or partners as view or edit, fully audited</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card my-3">
+  <div class="card-body text-center m-1">
+    <h3>Your Data, Your Providers, Your Rules</h3>
+    <p class="text-secondary mx-md-6">
+      CISO Dashboard keeps every client's data in one encrypted, tenant-isolated platform instead of
+      scattered across workbooks and inboxes. Bring your own storage bucket, your own email server,
+      and your own AI provider — Anthropic, Google, Mistral, Cloudflare, or a local model on your own
+      hardware — each organization's keys stored encrypted and used only for its own work. And
+      everything exports: Excel, CSV, and JSON you can re-import anywhere.
+    </p>
+  </div>
+</div>
+
+<div class="card my-3">
+  <h3 class="mt-5 text-center">Security &amp; Privacy By Design</h3>
+  <div class="card-body m-0 m-md-4">
+    <p>
+      Every organization on the platform is strictly isolated, with mandatory strong authentication —
+      passkeys and hardware keys, or an authenticator app with recovery codes — and assessors scoped
+      to only the clients they're assigned. Secrets and API keys are encrypted with AES-256-GCM with
+      key rotation, uploads are malware-scanned, and nightly encrypted backups land in tamper-proof,
+      object-locked storage.
+    </p>
+    <p>
+      Accountability is built in: a full audit trail of sign-ins, exports, sharing, and configuration
+      changes is kept for twelve months with CSV export, and monthly archives are retained for three
+      years. Cross-organization sharing is always explicit, notified, and revocable — nothing leaves
+      a tenant without a deliberate decision.
+    </p>
+    <p>
+      The platform itself is held to the standards it measures: hardened against the OWASP baseline
+      with enforced content-security policies, rate limiting, signed container images with software
+      bills of materials, and recurring internal security audits.
+    </p>
+  </div>
+</div>
+
+<div class="card my-3">
+  <div class="card-body text-center m-1">
+    <h3>Built By Assessors, For Assessors</h3>
+    <p class="text-secondary">
+      CISO Dashboard grew out of Decisive Resources' own vCISO practice — it runs the way real
+      engagements run. It's currently available by invitation —
+      <a href="/consultation">reach out</a> to see if it's a fit for your practice.
+    </p>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.feature-tabs button');
+    tabs.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        tabs.forEach(function (b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.feature-panel').forEach(function (p) {
+          p.classList.remove('active');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        var panel = document.getElementById('panel-' + btn.dataset.tab);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  })();
+</script>
