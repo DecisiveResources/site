@@ -4,7 +4,7 @@ title: "How Digital Exposure Enables Honeypot Tactics"
 description: The NVIDIA honeypot allegations highlight how digital exposure can enable targeted social engineering and corporate espionage. Discover how OSINT, digital footprints, and executive privacy management intersect—and why protecting personal privacy is essential to business security.
 author: Lindsey
 category: [ privacy, cybersecurity ]
-image: assets/post-images/Honey Pot.jpeg
+image: assets/post-images/Honey-Pot.jpeg
 featured: false
 ---
 
