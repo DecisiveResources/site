@@ -1,12 +1,13 @@
 ---
 layout: post
 title: "Control the Search, Strengthen the Deal: Privacy Management for Professional Athletes."
-description: Before teams, sponsors, and agents make decisions, they search an athlete's name. What they find can impact contracts, endorsements, personal safety, and reputation. Discover how Decisive Resources helps professional athletes reduce digital exposure, protect their privacy, and take control of their public image—before the next big opportunity.
+description: An athlete's digital footprint can influence contracts, sponsorships, reputation, and personal safety. Discover how Decisive Resources helps professional athletes protect their privacy, manage digital exposure, and strengthen their personal brand—putting them in control of what the world sees before the next big opportunity.
 author: Luke
 category: [ privacy, cybersecurity ]
 image: assets/post-images/From-Draft-Stage-to-Signing-Day.png
 featured: false
 ---
+
 # Control the Search, Strengthen the Deal: Privacy Management for Professional Athletes.
 
 Before a general manager makes an offer, before a brand sends a deal, before an agent returns a call, someone types the athlete's name into a search bar. Most athletes have never seen what comes back.
@@ -23,7 +24,6 @@ Four very different groups research an athlete, and all of them start with what 
 | Brands | BakerHostetler's 2026 playbook for brands tells sponsors to review an athlete's social media and reputation before signing, and to write in a morals clause that lets them pause or end the deal. |
 | Criminals | The NFL warned teams in 2024 that burglary crews were using public records to find players' addresses and tracking the social media of players and their families, Sports Illustrated reported. |
 | Angry bettors | An NCAA study verified 5,020 abusive posts aimed at athletes, coaches and officials, with more than 12% tied to sports betting, Legal Sports Report wrote. |
-
 
 What happens when the athlete is not the one in control is on the record too. Shortly before the 2016 NFL Draft, an old video appeared on Laremy Tunsil's Twitter account, which he said had been hacked. He had been considered a potential first overall pick and went 13th. An NPR reporter estimated the slide probably cost him six to eight million dollars.
 
