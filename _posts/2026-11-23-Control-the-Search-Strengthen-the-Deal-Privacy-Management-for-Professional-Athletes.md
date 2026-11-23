@@ -23,7 +23,7 @@ Four very different groups research an athlete, and all of them start with what 
 | Brands | BakerHostetler's 2026 playbook for brands tells sponsors to review an athlete's social media and reputation before signing, and to write in a morals clause that lets them pause or end the deal. |
 | Criminals | The NFL warned teams in 2024 that burglary crews were using public records to find players' addresses and tracking the social media of players and their families, Sports Illustrated reported. |
 | Angry bettors | An NCAA study verified 5,020 abusive posts aimed at athletes, coaches and officials, with more than 12% tied to sports betting, Legal Sports Report wrote. |
----
+<div style="height: 24px;"></div>
 
 What happens when the athlete is not the one in control is on the record too. Shortly before the 2016 NFL Draft, an old video appeared on Laremy Tunsil's Twitter account, which he said had been hacked. He had been considered a potential first overall pick and went 13th. An NPR reporter estimated the slide probably cost him six to eight million dollars.
 
