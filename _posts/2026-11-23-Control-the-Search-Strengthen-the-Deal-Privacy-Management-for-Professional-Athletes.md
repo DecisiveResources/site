@@ -7,7 +7,7 @@ category: [ privacy, cybersecurity ]
 image: assets/post-images/From-Draft-Stage-to-Signing-Day.png
 featured: false
 ---
-#Control the Search, Strengthen the Deal: Privacy Management for Professional Athletes.
+# Control the Search, Strengthen the Deal: Privacy Management for Professional Athletes.
 
 Before a general manager makes an offer, before a brand sends a deal, before an agent returns a call, someone types the athlete's name into a search bar. Most athletes have never seen what comes back.
 
