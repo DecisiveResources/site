@@ -90,9 +90,9 @@ If this was useful, share it with one person who has never opened their phone's 
 
 ### Sources
 
--   FTC v. Kochava case page and the May 4, 2026 FTC press release ([ftc.gov](http://ftc.gov))
+-   FTC v. Kochava case page and the May 4, 2026 FTC press release ([ftc.gov](https://www.ftc.gov))
 -   Yale Journal on Regulation, analysis of the Kochava order
--   California Privacy Protection Agency, DROP announcement ([cppa.ca.gov](http://cppa.ca.gov))
+-   California Privacy Protection Agency, DROP announcement ([cppa.ca.gov](https://cppa.ca.gov))
 -   Malwarebytes Labs on DROP, August 2026
 -   9to5Mac and TechSpot coverage of the Gravy Analytics breach, January 2025
 -   AdExchanger on Android advertising ID zeroing

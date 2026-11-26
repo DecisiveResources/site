@@ -11,12 +11,12 @@
         <div class="footer-social my-4">
             {% if site.linkedin_page == null %}
             {% else %}
-            <a href="{{ site.linkedin_page }}" target="_blank"><img class="icon-social" src="/assets/tabler-icons/icons/brand-linkedin.svg" alt="LinkedIn" title="LinkedIn"/></a>
+            <a href="{{ site.linkedin_page }}" target="_blank" rel="noopener noreferrer"><img class="icon-social" src="/assets/tabler-icons/icons/brand-linkedin.svg" alt="LinkedIn" title="LinkedIn"/></a>
             {% endif %}
 
             {% if site.facebook_page == null %}
             {% else %}
-            <a href="https://www.facebook.com/{{ site.facebook_page }}" target="_blank"><img class="icon-social" src="/assets/tabler-icons/icons/brand-facebook.svg" alt="Facebook" title="Facebook"/></a>
+            <a href="https://www.facebook.com/{{ site.facebook_page }}" target="_blank" rel="noopener noreferrer"><img class="icon-social" src="/assets/tabler-icons/icons/brand-facebook.svg" alt="Facebook" title="Facebook"/></a>
             {% endif %}
 
             {% if site.email == null %}
@@ -26,7 +26,7 @@
 
             {% if site.instagram_username == null %}
             {% else %}
-            <a href="http://instagram.com/{{ site.instagram_username }}" target="_blank"><img class="icon-social" src="/assets/tabler-icons/icons/brand-instagram.svg" alt="Instagram" title="Instagram"/></a>
+            <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" rel="noopener noreferrer"><img class="icon-social" src="/assets/tabler-icons/icons/brand-instagram.svg" alt="Instagram" title="Instagram"/></a>
             {% endif %}
           </div>
         <p>© 20{{ site.time | date: '%y' }} All rights reserved | License: A11643701</p>
