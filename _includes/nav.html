@@ -53,30 +53,5 @@
   </ul>
 </nav>
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const navbarToggle = document.getElementById('navbar-toggle');
-  const openIcon = document.getElementById('menu-open-icon');
-  const closeIcon = document.getElementById('menu-close-icon');
-  const isOpen = menu.classList.toggle('active');
-
-  navbarToggle.setAttribute('aria-expanded', isOpen);
-  openIcon.classList.toggle('d-none', isOpen);
-  closeIcon.classList.toggle('d-none', !isOpen);
-}
-
-document.getElementById('navbar-toggle').addEventListener('click', toggleMenu);
-document.getElementById('close-menu').addEventListener('click', toggleMenu);
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-  const menu = document.getElementById('mobile-menu');
-  const toggle = document.getElementById('navbar-toggle');
-
-  if (menu.classList.contains('active') && !menu.contains(event.target) && !toggle.contains(event.target)) {
-    toggleMenu();
-  }
-});
-</script>
+<script src="{{ site.baseurl }}/assets/js/nav.js"></script>
 
